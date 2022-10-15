@@ -5,14 +5,20 @@
     .global-header .header-logo a .logo{
        margin: 0 !important;
     }
+  .wrapper-preview-menu{
+    margin-bottom: -80px !important;
+  }
 }
 @media (max-width: 992px) {
    .main-header{
-         justify-content: center;
+         justify-content: center !important;
   }
   .global-header .header-logo a .logo{
-      margin: 0 0 0 20%!important;
+      margin: 5px 0 0 20%!important;
    }
+  :not(.courseware)>#content.content-wrapper{
+    padding-top: 70px !important;
+  }
 }
 .settings-language-form{
    margin-top: 24px;
@@ -115,3 +121,28 @@
  .login-and-registration-container{
    display: none !important;
  }
+ .course-view .page-header {
+   min-width: 100% !important;
+ }
+ .course-view .page-header-main{
+   margin-right: 16px !important;
+ }
+ .course-view .page-header .page-header-secondary{
+   margin-left: 0 !important;
+   margin-top: 16px !important;
+ }
+ //.preview-menu .btn .btn-primary .view-in-studio{
+ //  margin-top: 20px;
+ //}
+ .wrapper-preview-menu .preview-actions .action-preview .action-preview-select{
+   max-width: 148px !important;
+ }
+ .wrapper-preview-menu {
+   padding-top: 70px !important;
+ }
+ .wrapper-preview-menu .preview-menu{
+   display: flex;
+    align-items: center;
+    max-width: 100% !important;
+    justify-content: space-between;
+}
