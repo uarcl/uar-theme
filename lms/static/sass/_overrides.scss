@@ -137,6 +137,9 @@
  .wrapper-preview-menu .preview-actions .action-preview .action-preview-select{
    max-width: 148px !important;
  }
+ .wrapper-preview-menu .preview-actions{
+   flex-grow: 0 !important;
+ }
  .wrapper-preview-menu {
    padding-top: 70px !important;
  }
@@ -144,5 +147,9 @@
    display: flex;
     align-items: center;
     max-width: 100% !important;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
+.content-wrapper{
+  margin-left: 16px !important;
+  margin-right: 16px !important;
+ }
