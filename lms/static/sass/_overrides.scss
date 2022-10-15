@@ -91,13 +91,24 @@
   border-color: $primary;
 }
  .course-search .search-input:focus,.find-courses .discovery-input:focus{
-   border-color: $primary;
+   border-color: $primary !important;
+ }
+ .course-search .search-button{
+   background-color: $primary !important;
+   border-color: $primary !important;
+ }
+ .course-search .search-button:hover{
+   color: $primary !important;
+   background-color: #ffffff;
  }
  .continue-button a{
-   color: $primary;
-   border-color: $primary;
+   color: $primary !important;
+   border-color: $primary !important;
  }
  .continue-button a:hover{
-   color: #ffffff;
-   background-color: $primary;
+   color: #ffffff !important;
+   background-color: $primary !important;
+ }
+ .global-header .header-logo .course-header{
+   display: none !important;
  }
