@@ -1,0 +1,79 @@
+@media (min-width: 992px) {
+   .global-header .header-logo a .logo{
+	height: 80px !important;
+    }
+    .global-header .header-logo a .logo{
+       margin: 0 !important;
+    }
+}
+@media (max-width: 992px) {
+   .main-header{
+         justify-content: center;
+  }
+  .global-header .header-logo a .logo{
+      margin: 0 0 0 20%!important;
+   }
+}
+.settings-language-form{
+   margin-top: 24px;
+    margin-right: 12px;
+}
+.course-tittle{
+    background-color: #372164;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    font-weight: 1000;
+    font-family: 'Oswald', sans-serif;
+    margin:32px 0 0 0;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 2px 20px;
+}
+.home .courses-container .courses .courses-listing{
+   display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.home .courses-container .courses .courses-listing .courses-listing-item{
+  margin: 16px 0 !important;
+}
+.header-media{
+     padding:0;
+}
+.header-media img{
+	width:100%;
+}
+.header-media video{
+        width:100%;
+}
+
+.main-header {
+ display: flex;
+ justify-content: space-between;
+}
+.global-header .header-logo a{
+	margin: 0 0 0 15px !important;
+}
+.global-header .header-logo a .logo{
+    float: unset !important;
+}
+.header-logo{
+  margin:0 !important;
+}
+.main-header .nav-links{
+  display:flex;
+}
+.global-header .nav-links .main{
+      float: unset !important;
+}
+.global-header .nav-links .secondary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: unset !important;
+    margin: 0 40px;
+}
+.help-link{
+        display: none !important;
+}
