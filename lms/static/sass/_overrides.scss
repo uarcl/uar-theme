@@ -77,3 +77,27 @@
 .help-link{
         display: none !important;
 }
+.courses-container .courses .course{
+  border-bottom-color: $primary !important;
+}
+.find-courses .search-facets.phone-menu{
+  display: none !important;
+}
+.find-courses .filters .clear-filters{
+  color: $primary !important;
+}
+.find-courses .discovery-submit{
+  background-color: $primary;
+  border-color: $primary;
+}
+ .course-search .search-input:focus,.find-courses .discovery-input:focus{
+   border-color: $primary;
+ }
+ .continue-button a{
+   color: $primary;
+   border-color: $primary;
+ }
+ .continue-button a:hover{
+   color: #ffffff;
+   background-color: $primary;
+ }
