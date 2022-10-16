@@ -111,9 +111,10 @@
    color: $primary !important;
    border-color: $primary !important;
  }
- .continue-button a:hover{
+ .continue-button a:hover,  .continue-button a:focus{
    color: #ffffff !important;
    background-color: $primary !important;
+   border-color: $primary !important;
  }
  .global-header .header-logo .course-header{
    display: none !important;
@@ -153,3 +154,16 @@
   margin-left: 16px !important;
   margin-right: 16px !important;
  }
+.profile-uar-registry{
+  width: 300px;
+  background-color: #fff;
+  border-top: 5px solid #0075b4;
+  padding-bottom: 20px;
+}
+.profile-uar-registry .profile-uar-registry-first-row{
+  max-width:80% !important;
+  margin: 16px auto !important;
+}
+.profile-uar-registry .profile-uar-registry-snd-row{
+  text-align:center;
+}
