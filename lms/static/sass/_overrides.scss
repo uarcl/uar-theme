@@ -16,9 +16,9 @@
   .global-header .header-logo a .logo{
       margin: 5px 0 0 20%!important;
    }
-  :not(.courseware)>#content.content-wrapper{
-    padding-top: 70px !important;
-  }
+  //:not(.courseware)>#content.content-wrapper{
+  //  padding-top: 70px !important;
+  //}
 }
 .settings-language-form{
    margin-top: 24px;
@@ -166,4 +166,8 @@
 }
 .profile-uar-registry .profile-uar-registry-snd-row{
   text-align:center;
+}
+.content-wrapper .course-tabs{
+  overflow-x: auto !important;
+  padding-bottom: 8px !important;
 }
