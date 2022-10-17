@@ -251,3 +251,14 @@
 .wrapper-footer footer#footer-openedx .wrapper-logo a{
   border:none !important;
 }
+// Course about
+.course-info .container{
+  display: flex !important;
+  justify-content: space-between !important;
+  min-width: 100% !important;
+}
+@media (max-width: 991px) {
+  .course-info .container{
+    flex-direction: column !important;
+  }
+}
