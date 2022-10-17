@@ -23,7 +23,7 @@
 
 .settings-language-form{
    margin-top: 24px;
-    margin-right: 12px;
+    margin-right: 26px;
 }
 .course-tittle{
     background-color: #372164;
@@ -154,7 +154,7 @@
 .content-wrapper{
   margin-left: 16px !important;
   margin-right: 16px !important;
-  padding-bottom: 60px !important;
+  padding-bottom: 160px !important;
  }
 .profile-uar-registry{
   width: 300px;
@@ -177,14 +177,14 @@
 // Footer
 .wrapper-footer{
    background-color: #eaecee !important;
-    position: sticky;
+    position: fixed;
     bottom: 0;
     width: 100% !important;
     min-height: 100px;
     box-shadow: none !important;
     border-top: none !important;
     padding: 1em 0 0 0 !important;
-    z-index: 99;
+    z-index: 999;
     max-width: 100%;
 }
 @media (min-width:992px){
