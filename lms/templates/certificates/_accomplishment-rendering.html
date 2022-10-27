@@ -5,10 +5,32 @@
 course_mode_class = course_mode if course_mode else ''
 %>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style type="text/css">
+    @media (min-width: 992px){
+        .header-app .logo-img{
+            height: 80px !important;
+        }
+    }
+    .header-app .logo-img{
+        width: auto !important;
+        height: 40px;
+    }
+    .header-app .logo{
+        margin: 0 !important;
+    }
+    .uar-certificate-rendering {
+        border: none !important;
+        padding: 0!important;
+        flex-direction: column!important;
+        align-items: center!important;
+        box-shadow: none !important;
+    }
+</style>
 <main class="accomplishment accomplishment-main">
 
     <div class="wrapper-accomplishment-rendering">
-        <div class="accomplishment-rendering" id="accomplishment-rendering" style="border: none !important;padding: 0!important;flex-direction: column!important;align-items: center!important;box-shadow: none;">
+        <div class="accomplishment-rendering uar-certificate-rendering" id="accomplishment-rendering">
             <div class="embed-responsive embed-responsive-4by3">
                 <iframe class="embed-responsive-item" src="https://certificados.uar.cl/pdfview/?file=/digital/${certificate_id_number}" allowfullscreen></iframe>
             </div>
