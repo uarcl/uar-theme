@@ -254,3 +254,6 @@
     flex-direction: column !important;
   }
 }
+.btn-default, .btn-primary, .btn-brand, .btn-upgrade{
+  text-transform: unset !important;
+}
