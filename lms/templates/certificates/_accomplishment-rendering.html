@@ -35,7 +35,7 @@ course_mode_class = course_mode if course_mode else ''
     <div class="wrapper-accomplishment-rendering">
         <div class="accomplishment-rendering uar-certificate-rendering" id="accomplishment-rendering">
             <div class="embed-responsive embed-responsive-4by3">
-                <iframe class="embed-responsive-item" src="https://certificados.uar.cl/pdfview/?file=/digital/${certificate_id_number}" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="https://${settings.FEATURES.get('CERT_DOMAIN')}/pdfview/?file=/digital/${certificate_id_number}" allowfullscreen></iframe>
             </div>
         </div>
     </div>
