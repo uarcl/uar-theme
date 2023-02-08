@@ -9,89 +9,64 @@
 <% footer = get_footer(is_secure=is_secure) %>
 <% icp_license_info = getattr(settings, 'ICP_LICENSE_INFO', {})%>
 <%namespace name='static' file='static_content.html'/>
-
-% if uses_bootstrap:
-  <div class="container-fluid wrapper-footer">
-    <footer>
-      <div class="row">
-        <div class="col-md-9">
-          <nav class="navbar site-nav navbar-expand-sm" aria-label="${_('About')}">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="mailto:info@uardigital.cl">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="mailto:soporte@uardigital.cl">Soporte</a>
-              </li>
-            </ul>
-          </nav>
-
-          <div class="wrapper-logo">
-            <p>
-              <a href="/">
-                ## The default logo is a placeholder.
-                ## You can either replace this link entirely or update
-                ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-                ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-                ## can be included in the footer on other sites
-                ## (e.g. a blog or marketing front-end) to provide a consistent
-                ## user experience.  See the branding app for details.
-                <img alt="organization logo" src="${static.url('uar-theme/images/logo_footer.png')}">
-              </a>
-            </p>
-          </div>
-
-          ## Site operators: Please do not remove this paragraph! This attributes back to edX and makes your acknowledgement of edX's trademarks clear.
-          <p class="copyright">${footer['copyright']} ${u" | {icp}".format(icp=getattr(settings,'ICP_LICENSE')) if getattr(settings,'ICP_LICENSE',False) else ""}</p>
-
+<footer role="contentinfo" class="footer d-flex px-2 uar-footer align-items-center py-2 bg-primary justify-content-between">
+  <div class="container-fluid">
+    <div class="d-flex flex-column flex-md-row justify-content-between">
+      <div class="d-flex flex-column">
+        <div class="text-center">
+          <img class="uar-footer-logo mb-4 mx-4" src="${static.url('uar-theme/images/logo_recoleta_bco.png')}" alt="Logo Recoleta"/>
+        </div>
+        <div class="text-center">
+          <img class="uar-footer-logo mb-4 mx-4" src="${static.url('uar-theme/images/logo_uar_bco.png')}" alt="Logo UAR"/>
         </div>
       </div>
-    </footer>
-  </div>
-% else:
-  <div class="wrapper wrapper-footer">
-    <footer id="footer-openedx" class="grid-container"
-      ## When rendering the footer through the branding API,
-      ## the direction may not be set on the parent element,
-      ## so we set it here.
-      % if bidi:
-        dir=${bidi}
-      % endif
-    >
-      <div class="colophon">
-        <nav class="nav-colophon" aria-label="${_('About')}">
-          <ol>
-              <li class="nav-colophon-01">
-		        <a id="contact" href="mailto:info@uardigital.cl">Contacto</a>
-              </li>
-	          <li class="nav-colophon-01">
-                <a id="contact" href="mailto:soporte@uardigital.cl">Soporte</a>
-              </li>
-          </ol>
-        </nav>
-
-        % if context.get('include_language_selector', footer_language_selector_is_enabled()):
-            <%include file="${static.get_template_path('widgets/footer-language-selector.html')}"/>
-        % endif
-
-        <div class="wrapper-logo">
-          <p>
-            <a href="/">
-              ## The default logo is a placeholder.
-              ## You can either replace this link entirely or update
-              ## the FOOTER_ORGANIZATION_IMAGE in Django settings.
-              ## If you customize FOOTER_ORGANIZATION_IMAGE, then the image
-              ## can be included in the footer on other sites
-              ## (e.g. a blog or marketing front-end) to provide a consistent
-              ## user experience.  See the branding app for details.
-              <img alt="organization logo" src="${static.url('uar-theme/images/logo_footer.png')}">
-            </a>
-          </p>
+      <div class="d-flex flex-column text-white mt-4 mt-md-0">
+        <div class="text-white uar-font-12p mb-2">Siguenos</div>
+        <div class="text-white uar-font-12p">
+          <a href="https://www.facebook.com/universidadabiertarecoletauar" target="_blank" class="uar-footer-rrss-link">
+            <div class="uar-footer-icon-container uar-footer-icon-facebook"><i class="fab fa-facebook uar-footer-icon"></i></div>
+            <div class="uar-footer-link-text">universidadabiertarecoletauar</div>
+          </a>
+        </div>
+        <div class="text-white uar-font-12p">
+          <a href="https://www.instagram.com/uderecoleta/" target="_blank" class="uar-footer-rrss-link">
+            <div class="uar-footer-icon-container uar-footer-icon-instagram"><i class="fab fa-instagram uar-footer-icon"></i></div>
+            <div class="uar-footer-link-text">@uderecoleta</div>
+          </a>
+        </div>
+        <div class="text-white uar-font-12p">
+          <a href="https://twitter.com/UdeRecoleta" target="_blank" class="uar-footer-rrss-link">
+            <div class="uar-footer-icon-container uar-footer-icon-twitter"><i class="fab fa-twitter uar-footer-icon"></i></div>
+            <div class="uar-footer-link-text">@UdeRecoleta</div>
+          </a>
+        </div>
+        <div class="text-white uar-font-12p">
+          <a href="https://www.youtube.com/c/UniversidadAbiertadeRecoleta" target="_blank" class="uar-footer-rrss-link">
+            <div class="uar-footer-icon-container uar-footer-icon-youtube"><i class="fab fa-youtube uar-footer-icon"></i></div>
+            <div class="uar-footer-link-text">UniversidadAbiertadeRecoleta</div>
+          </a>
+        </div>
+        <div class="text-white uar-font-12p">
+          <a href="https://www.linkedin.com/company/universidad-abierta-de-recoleta/" target="_blank" class="uar-footer-rrss-link">
+            <div class="uar-footer-icon-container uar-footer-icon-linkedin"><i class="fab fa-linkedin uar-footer-icon"></i></div>
+            <div class="uar-footer-link-text">universidad-abierta-de-recoleta</div>
+          </a>
+        </div>
+        <div class="text-white uar-font-12p">
+          <a href="https://open.spotify.com/show/0PhzkR5dKFBtyqLxTOBemX" target="_blank" class="uar-footer-rrss-link">
+            <div class="uar-footer-icon-container uar-footer-icon-spotify"><i class="fab fa-spotify uar-footer-icon"></i></div>
+            <div class="uar-footer-link-text">Universidad Abierta de Recoleta</div>
+          </a>
+        </div>
+        <div class="font-weight-bold uar-font- mt-4 uar-font-15p">
+          <span>Contacto: </span>
+          <a class="text-white font-weight-bold uar-font uar-font-15p" href="mailto:info@uarecoleta.cl">info@uarecoleta.cl</a>
         </div>
       </div>
-    </footer>
+    </div>
   </div>
-% endif
+</footer>
+
 % if include_dependencies:
   <%static:js group='base_vendor'/>
   <%static:css group='style-vendor'/>

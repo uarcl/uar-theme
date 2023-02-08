@@ -257,3 +257,295 @@
 .btn-default, .btn-primary, .btn-brand, .btn-upgrade{
   text-transform: unset !important;
 }
+
+/*********Header******************/
+/*********Header******************/
+/*********Header******************/
+
+.main-header{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px){
+.course-title-lockup{
+    display: none !important;
+}
+.card.pgn__card > .pgn__card-header{
+    flex-direction: column;
+    align-items: center;
+}
+.card.pgn__card .pgn__card-header .pgn__card-header-title-md{
+    text-align: center;
+}
+.learning-header a img {
+    max-height: 40px !important;
+}
+}
+@media (min-width: 769px){
+.learning-header {
+    position: sticky;
+    top: 0;
+}
+.learning-header .logo {
+    height: unset !important;
+}
+.learning-header .logo img{
+  max-height: 49px;
+  height: 49px !important;
+}
+}
+.learning-header {
+background-color: #fff;
+height: 140px!important;
+max-height: 140px!important;
+min-height: 140px!important;
+z-index: 9999;
+width: 100%;
+}
+.learning-header .course-title-lockup .small {
+display: none !important;
+}
+.course-tabs-navigation a.nav-link{
+color: $primary;
+}
+.user-dropdown .dropdown-item{
+color: $primary;
+}
+.learning-header .course-title-lockup a{
+display: none !important;
+}
+main{
+min-height: calc(100vh - 106px);
+padding-top: 12px;
+}
+.btn{
+border-radius: 12px !important;
+}
+.btn:focus:before{
+border: none !important;
+}
+@media (max-width: 768px){
+.uar-logo-header{
+  max-height: 40px !important;
+}
+}
+.uar-top-header{
+min-height: 46px;
+  background-color: #fff;
+  height: 46px;
+  width: 100%;
+  max-height: 46px;
+}
+.uar-top-header-container{
+background-color: #b4b3df;
+width: 100%;
+min-width: 100%;
+}
+.btn-uar-header{
+border: 2px solid white;
+  background-color: #5708ab;
+  color: #fff;
+  border-radius: 12px;
+  padding: 4px 7px;
+  font-family: "Asap",sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 6px;
+  max-height: 24px !important;
+align-items: center;
+display: flex;
+}
+header .btn.btn-uar-header > span, header .btn.btn-uar-lang-sel > span{
+line-height: 1;
+font-size:12px !important;
+font-family: "Asap",sans-serif;
+}
+.btn.btn-uar-header:hover{
+background-color: #270089 !important;
+color:#fff !important;
+}
+.btn-uar-lang-sel{
+border: 2px solid white;
+  background-color: #d10a17;
+  color: #fff;
+  border-radius: 12px;
+  padding: 4px 7px;
+  font-family: "Asap",sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0 12px;
+  min-width: 110px;
+  background-image: none !important;
+  max-height: 24px !important;
+align-items: center;
+display: flex;
+}
+.btn-uar-header-icon{
+margin-right: 9px;
+}
+.btn-uar-lang-sel:hover{
+color: #fff !important;
+background-color: #D10A1794 !important;
+}
+.uar-bottom-header{
+border-bottom: 1px solid #5708ab;
+  padding: 20px 12px !important;
+}
+.uar-legacy-header{
+  display: flex;
+width: 100%;
+justify-content: space-between;
+height: 90px !important;
+align-items: center;
+   border-bottom: 1px solid #5708ab;
+}      
+header.global-header{
+  border: none !important;
+}
+
+/*********Footer******************/
+/*********Footer******************/
+/*********Footer******************/
+
+.uar-footer{
+  width: 100% !important;
+  min-width: 100% !important;
+  background-color: #5708ab !important;
+}
+@media (max-width: 768px){
+.uar-footer-logo{
+  max-height: 64px;
+  padding: 0 4px;
+}
+}
+@media (min-width: 768px){
+.uar-footer-logo{
+  max-height: 64px;
+  padding: 0 4px;
+}
+}
+.uar-font{
+font-family: "Asap",Sans-serif !important;
+}
+.uar-font-12p{
+font-size: 12px !important;
+}
+.uar-font-15p{
+font-size: 15px !important;
+}
+.uar-footer-icon-container{
+align-items: center;
+display: flex;
+justify-content: center;
+min-height: 32px;
+min-width: 32px;
+height: 32px;
+width: 32px;
+max-width: 32px;
+max-height: 32px;
+}
+.uar-footer-icon-container span{
+margin-left: 4px;
+}
+.uar-footer-rrss-link{
+align-items: center;
+justify-content: flex-start;
+color: #fff!important;
+display: flex;
+}
+.uar-footer-rrss-link:hover{
+text-decoration: none !important;
+}
+.uar-footer-icon{
+min-width: 16px;
+min-height: 16px;
+width: 16px;
+height: 16px;
+max-width: 16px;
+max-height: 16px;
+font-size: 16px;
+}
+.uar-footer-icon-facebook{
+background-color: #009088;
+}
+.uar-footer-icon-instagram{
+background-color: #270089;
+}
+.uar-footer-icon-twitter{
+background-color: #d10a17;
+}
+.uar-footer-icon-youtube{
+background-color: #e18106;
+}
+.uar-footer-icon-linkedin{
+background-color: #009088;
+}
+.uar-footer-icon-spotify{
+background-color: #270089;
+}
+.course-tabs-navigation{
+border-bottom: none !important;
+}
+.uar-footer-link-text{
+margin-left: 10px !important;
+}
+.pgn__checkpoint{
+z-index: 999999 !important;
+}
+:not(.courseware)>#content.content-wrapper{
+    margin: 0 auto !important;
+    padding: 12px 16px 32px!important;
+    max-width: 1600px !important;
+}
+.home>header .outer-wrapper{
+    display: none !important;
+}
+header.global-header{
+   position: sticky !important;
+}
+.main-header{
+  max-width: 1600px;
+margin: 0 auto;
+}
+.uar-footer .container-fluid{
+max-width: 1600px;
+margin: 1.5rem auto !important;
+}
+body.view-in-course .wrapper-course-material .course-material .course-tabs{
+    display: flex;
+list-style: none;
+flex-wrap: nowrap;
+overflow-x: auto !important;
+}
+body.view-in-course .wrapper-course-material .course-tabs .tab a:hover,body.view-in-course .wrapper-course-material .course-tabs .tab a:visited:hover{
+background-color: #e9e6e4;
+        font-weight: 400 !important;
+}
+body.view-in-course .wrapper-course-material .course-tabs .tab a:hover:not(.active),body.view-in-course .wrapper-course-material .course-tabs .tab a:visited:hover:not(.active){
+border-bottom: none !important;
+}
+.wrapper-course-material .course-tabs .tab a.active{
+border-bottom-style: solid !important;
+}
+.wrapper-course-material .course-tabs .tab a, .wrapper-course-material .course-tabs .tab a:visited{
+border-left: 0;
+border-radius: 0;
+border-right: 0;
+border-top: 4px solid #0000;
+border-bottom-color: #3a2562;
+color: #3a2562;
+font-weight: 500 !important;
+font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+font-size: 18px;
+line-height: 1.5555555556;
+height: 52px;
+padding: 0.5rem 1rem;
+}
+.container>div{
+border:none !important;
+box-shadow: none !important;
+}
+body.view-in-course .static_tab_wrapper{
+  padding: 2em 16px !important;
+}
+
