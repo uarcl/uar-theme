@@ -36,10 +36,9 @@ enterprise_customer_link = get_enterprise_learner_portal(request)
         % endif
     </a>
   % endif
-  % if course:
-    <div class="course-header">
-      <span class="provider">${course.display_org_with_default}:</span>
-      <span class="course-number">${course.display_number_with_default}</span>
+</h1>
+% if course:
+    <div class="course-header flex-grow-1">
       <%
       display_name = course.display_name_with_default
       if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
@@ -47,10 +46,9 @@ enterprise_customer_link = get_enterprise_learner_portal(request)
         if ccx:
           display_name = ccx.display_name
       %>
-      <span class="course-name">${display_name}</span>
+      <span class="course-name d-none d-md-block m-0 font-weight-bold course-title uar-mfe-font uar-font-18p text-gray-700">${display_name}</span>
     </div>
   % endif
-</h1>
 % if enable_enterprise_sidebar:
   <div class="enterprise-tagline">
     <% tagline = configuration_helpers.get_value('ENTERPRISE_TAGLINE', settings.ENTERPRISE_TAGLINE) %>

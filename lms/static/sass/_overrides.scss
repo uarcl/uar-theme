@@ -1,6 +1,6 @@
 @media (min-width: 992px) {
    .global-header .header-logo a .logo{
-	height: 80px !important;
+	height: 60px !important;
     }
     .global-header .header-logo a .logo{
        margin: 0 !important;
@@ -13,9 +13,6 @@
    .main-header{
          justify-content: center !important;
   }
-  .global-header .header-logo a .logo{
-      margin: 5px 0 0 20%!important;
-   }
   //:not(.courseware)>#content.content-wrapper{
   //  padding-top: 70px !important;
   //}
@@ -357,7 +354,7 @@ display: flex;
 }
 header .btn.btn-uar-header > span, header .btn.btn-uar-lang-sel > span{
 line-height: 1;
-font-size:12px !important;
+font-size:10px !important;
 font-family: "Asap",sans-serif;
 }
 .btn.btn-uar-header:hover{
@@ -528,18 +525,18 @@ border-bottom: none !important;
 border-bottom-style: solid !important;
 }
 .wrapper-course-material .course-tabs .tab a, .wrapper-course-material .course-tabs .tab a:visited{
-border-left: 0;
-border-radius: 0;
-border-right: 0;
-border-top: 4px solid #fff;
-border-bottom-color: #3a2562;
-color: #3a2562;
-font-weight: 500 !important;
-font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
-font-size: 18px;
-line-height: 1.5555555556;
-height: 52px;
-padding: 0.5rem 1rem;
+  border-left: 0;
+  border-radius: 0;
+  border-right: 0;
+  border-top: 4px solid #fff;
+  border-bottom-color: #3a2562 !important;
+  color: #3a2562 !important;
+  font-weight: 500 !important;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji !important;
+  font-size: 18px !important;
+  line-height: 1.5555555556 !important;
+  height: 52px;
+  padding: 0.5rem 1rem !important;
 }
 .container>div{
 border:none !important;
@@ -548,4 +545,99 @@ box-shadow: none !important;
 body.view-in-course .static_tab_wrapper{
   padding: 2em 16px !important;
 }
+@media (max-width:991.98px){
+  .global-header .main-header{
+    height: unset !important;
+  }
+}
+.uar-legacy-header{
+  max-width: 100% !important;
+}
+header .btn.btn-uar-header > span, header .btn.btn-uar-lang-sel > span{
+  line-height: 1;
+  font-size:10px !important;
+  font-family: "Asap",sans-serif;
+}
+@media (min-width: 992px){
+  .global-header .header-logo a .logo {
+    height: 49px !important;
+  }
+}
+@media (min-width: 769px){
+.learning-header .logo img {
+    height: 40px!important;
+    max-height: 40px;
+}
+}
+header.global-header .nav-links .secondary .dropdown-user-menu {
+position: absolute !important;
+inset: 0px auto auto 0px !important;
+margin: 0px !important;
+transform: translate(0px, 46px) !important;
+}
 
+.dropdown > .btn.btn-user-dropdown.dropdown-toggle{
+  align-items: center;
+display: inline-flex;
+font-size: 1.125rem;
+font-weight: 400;
+justify-content: center;
+line-height: 1.3333;
+padding: 0.5625rem 1rem;
+text-align: center;
+-webkit-user-select: none;
+user-select: none;
+vertical-align: middle;
+color: #3a2562;
+border-color: #3a2562;
+background: #fff;
+}
+.dropdown > .btn.btn-user-dropdown.dropdown-toggle:hover{
+  background-color: #f3f2f6;
+border-color: #291a45;
+color: #2e1e4e;
+}
+.uar-mfe-font{
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji !important;
+}
+.uar-font-18p{
+  font-size: 18px !important;
+}
+.text-gray-700 {
+color: #454545!important;
+}
+.btn:focus{
+box-shadow: none !important;
+outline: 0 !important;
+position: relative !important;
+}
+.dropdown-item:hover{
+background-color: #f0eeed !important;
+text-decoration: none !important;
+color: #3a2562 !important;
+}
+.header.global-header{
+min-height: 140px !important;
+height: 140px !important;
+max-height: 140px !important;
+}
+.global-header .header-logo{
+display: block;
+margin: 0 1rem 0 0 !important;
+}
+@media (max-width: 992px) {
+header.global-header .header-logo a .logo{
+  margin: 0 !important;
+}
+}
+.global-header .header-logo a{
+margin: 0 !important;
+padding: 0 !important;
+}
+body.view-in-course .wrapper-course-material .course-material .course-tabs{
+max-width: 100vw !important;
+flex-wrap: wrap !important;
+}
+.global-header{
+overflow: unset !important;
+}
