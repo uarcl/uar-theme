@@ -24,7 +24,7 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
 %>
 <div class="d-flex align-items-center justify-content-end flex-row">
   <div>
-    <a href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}" class="mr-1 mr-md-3 btn btn-outline-primary">${_("Register")}</a>
-    <a href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}" class="btn btn-primary">${_("Sign in")}</a>
+    <a href="/register${login_query()}" class="mr-1 mr-md-3 btn btn-outline-primary">${_("Register")}</a>
+    <a href="/login${login_query()}" class="btn btn-primary">${_("Sign in")}</a>
   </div>
 </div>
