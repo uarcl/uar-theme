@@ -371,7 +371,7 @@ border: 2px solid white;
   font-size: 12px;
   font-weight: 700;
   margin: 0 12px;
-  min-width: 110px;
+  min-width: 90px;
   background-image: none !important;
   max-height: 24px !important;
 align-items: center;
@@ -499,6 +499,9 @@ z-index: 999999 !important;
 }
 header.global-header{
    position: sticky !important;
+   height: 140px !important;
+    max-height: 140px !important;
+    min-height: 140px !important;
 }
 .main-header{
   max-width: 1600px;
