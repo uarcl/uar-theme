@@ -343,13 +343,14 @@ border: 2px solid white;
   color: #fff;
   border-radius: 12px;
   padding: 4px 7px;
-  font-family: "Asap",sans-serif;
+  font-family: "Asap",sans-serif !important;
   font-size: 12px;
   font-weight: 700;
   margin: 0 6px;
   max-height: 24px !important;
 align-items: center;
 display: flex;
+justify-content: center;
 }
 header .btn.btn-uar-header > span, header .btn.btn-uar-lang-sel > span{
 line-height: 1;
@@ -366,7 +367,7 @@ border: 2px solid white;
   color: #fff;
   border-radius: 12px;
   padding: 4px 7px;
-  font-family: "Asap",sans-serif;
+  font-family: "Asap",sans-serif !important;
   font-size: 12px;
   font-weight: 700;
   margin: 0 12px;
@@ -375,6 +376,7 @@ border: 2px solid white;
   max-height: 24px !important;
 align-items: center;
 display: flex;
+justify-content: center;
 }
 .btn-uar-header-icon{
 margin-right: 9px;
@@ -685,7 +687,7 @@ font-size: 1.125rem;
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji !important;
 }
 @media (max-width:767px) {
-.uar-legacy-header .btn{
+.uar-legacy-header .btn:not(.dropdown-toggle){
   padding: 4px 8px !important;
   font-size: 11px !important;
 }

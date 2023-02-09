@@ -68,8 +68,8 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
         </a>
       </div>
       <div>
-        <button class="btn btn-uar-lang-sel">
-          <span><i class="fas fa-globe btn-uar-header-icon"></i>ESPAÑOL</span>
+        <button class="btn btn-uar-lang-sel" id="change_user_lang_button">
+          <span><i class="fas fa-globe btn-uar-header-icon"></i><span id="current_user_lang"></span></span>
         </button>
       </div>
     </div>
@@ -84,7 +84,15 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     </div>
 
 </div>
-
+<script>
+  document.getElementById("current_user_lang").textContent =  (Cookies.get("openedx-language-preference") === "en")?"ENGLISH":"ESPAÑOL";
+  document.getElementById("change_user_lang_button").addEventListener("click",function(){
+    var new_user_lang = (Cookies.get("openedx-language-preference") === "en")?"es-419":"en";
+    Cookies.set("openedx-language-preference",new_user_lang,{domain:'.uardigital.cl',expires: 365,path:'/',secure: true,sameSite:'None'});
+    document.getElementById("current_user_lang").textContent = (new_user_lang === "en")?"ENGLISH":"ESPAÑOL";
+    window.location.reload();
+  });
+</script>
 </header>
 
 % if course:
