@@ -34,8 +34,8 @@ should_show_order_history = should_redirect_to_order_history_microfrontend() and
             <i class="fas fa-user-circle fa-lg"></i><span class="d-none d-md-inline mx-2">${displayname}</span>
         </button>
         <div class="dropdown-menu dropdown-menu-right">
-        <a class="dropdown-item" href="${reverse('dashboard')}">${_("Dashboard")}</a>
-        <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}">${_("Profile")}</a>
+        <a class="dropdown-item" href="${reverse('dashboard')}">${_("My Courses")}</a>
+        <a class="dropdown-item" href="${reverse('learner_profile', kwargs={'username': username})}">${_("My Profile")}</a>
         <a class="dropdown-item" href="${reverse('logout')}">${_("Sign Out")}</a>
         </div>
     </div>
