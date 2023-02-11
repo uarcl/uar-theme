@@ -840,18 +840,23 @@ body.view-in-course .wrapper-course-material .course-material .course-tabs {
 }
 
 .uar-bottom-header .course-header .course-name {
-  max-height: 74px;
-  overflow: hidden;
+  max-height: 74px !important;
+  overflow: hidden !important;
+  font-size: 16px !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
 }
-
+header.global-header , header.global-header .course-header {
+  min-width: 0;
+}
 .btn-brand {
-  background-color: #9d0054;
-  border-color: #9d0054;
-  color: #fff;
+  background-color: #9d0054 !important;
+  border-color: #9d0054 !important;
+  color: #fff !important;
 }
 
 .btn-brand:hover {
-  background-color: #7e0043;
-  border-color: #7e0043;
-  color: #fff;
+  background-color: #7e0043 !important;
+  border-color: #7e0043 !important;
+  color: #fff !important;
 }
