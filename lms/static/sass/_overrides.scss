@@ -849,13 +849,13 @@ body.view-in-course .wrapper-course-material .course-material .course-tabs {
 header.global-header , header.global-header .course-header {
   min-width: 0;
 }
-.btn-brand {
+.btn.btn-brand,.btn.btn-change-privacy {
   background-color: #9d0054 !important;
   border-color: #9d0054 !important;
   color: #fff !important;
 }
 
-.btn-brand:hover {
+.btn.btn-brand:hover,.btn.btn-change-privacy:hover {
   background-color: #7e0043 !important;
   border-color: #7e0043 !important;
   color: #fff !important;
