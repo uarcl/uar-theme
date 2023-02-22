@@ -483,10 +483,6 @@ header .btn.btn-uar-lang-sel>span {
   max-width: 100% !important;
 }
 
-header.global-header {
-  border: none !important;
-}
-
 /*********Footer******************/
 /*********Footer******************/
 /*********Footer******************/
@@ -607,12 +603,11 @@ header.global-header {
 }
 
 header.global-header {
-  position: sticky !important;
+  border: none !important;
   height: 140px !important;
   max-height: 140px !important;
   min-height: 140px !important;
 }
-
 .main-header {
   max-width: 1600px;
   margin: 0 auto;
@@ -694,6 +689,9 @@ header .btn.btn-uar-lang-sel>span {
     height: 40px !important;
     max-height: 40px;
   }
+  header.global-header {
+    position: sticky !important;
+  }
 }
 
 header.global-header .nav-links .secondary .dropdown-user-menu {
@@ -752,11 +750,7 @@ header.global-header .nav-links .secondary .dropdown-user-menu {
   color: #3a2562 !important;
 }
 
-.header.global-header {
-  min-height: 140px !important;
-  height: 140px !important;
-  max-height: 140px !important;
-}
+
 
 .global-header .header-logo {
   display: block;
@@ -846,16 +840,21 @@ body.view-in-course .wrapper-course-material .course-material .course-tabs {
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
 }
-header.global-header , header.global-header .course-header {
+
+header.global-header,
+header.global-header .course-header {
   min-width: 0;
 }
-.btn.btn-brand,.btn.btn-change-privacy {
+
+.btn.btn-brand,
+.btn.btn-change-privacy {
   background-color: #9d0054 !important;
   border-color: #9d0054 !important;
   color: #fff !important;
 }
 
-.btn.btn-brand:hover,.btn.btn-change-privacy:hover {
+.btn.btn-brand:hover,
+.btn.btn-change-privacy:hover {
   background-color: #7e0043 !important;
   border-color: #7e0043 !important;
   color: #fff !important;
