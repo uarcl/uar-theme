@@ -325,7 +325,7 @@
   flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.9px) {
   .course-title-lockup {
     display: none !important;
   }
@@ -342,9 +342,14 @@
   .learning-header a img {
     max-height: 40px !important;
   }
+  header.global-header {
+    height: 115px !important;
+    max-height: 115px !important;
+    min-height: 115px !important;
+  }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .learning-header {
     position: sticky;
     top: 0;
@@ -357,6 +362,12 @@
   .learning-header .logo img {
     max-height: 49px;
     height: 49px !important;
+  }
+  .main-header .course-title{
+    font-size: 12px !important;
+  }
+  .uar-bottom-header{
+    height: 90px !important;
   }
 }
 
@@ -397,9 +408,20 @@ main {
   border: none !important;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767.9px) {
   .uar-logo-header {
     max-height: 40px !important;
+  }
+  .btn.btn-uar-lang-sel{
+    padding: 2px 4px !important;
+    margin: 0 6px !important;
+    min-width: 50px !important;
+  }
+  .main-header .course-title{
+    font-size: 10px !important;
+  }
+  .uar-bottom-header{
+    height: 65px !important;
   }
 }
 
@@ -452,7 +474,6 @@ header .btn.btn-uar-lang-sel>span {
   border-radius: 12px;
   padding: 4px 7px;
   font-family: "Asap", sans-serif !important;
-  font-size: 12px;
   font-weight: 700;
   margin: 0 12px;
   min-width: 90px;
@@ -462,6 +483,7 @@ header .btn.btn-uar-lang-sel>span {
   display: flex;
   justify-content: center;
 }
+
 
 .btn-uar-header-icon {
   margin-right: 9px;
@@ -478,7 +500,6 @@ header .btn.btn-uar-lang-sel>span {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  height: 90px !important;
   align-items: center;
   max-width: 100% !important;
 }
@@ -491,20 +512,11 @@ header .btn.btn-uar-lang-sel>span {
   width: 100% !important;
   min-width: 100% !important;
   background-color: #5708ab !important;
+  padding-top: 0.5rem;
 }
-
-@media (max-width: 768px) {
-  .uar-footer-logo {
-    max-height: 64px;
-    padding: 0 4px;
-  }
-}
-
-@media (min-width: 768px) {
-  .uar-footer-logo {
-    max-height: 64px;
-    padding: 0 4px;
-  }
+.uar-footer-logo {
+  max-height: 64px;
+  padding: 0 4px;
 }
 
 .uar-font {
@@ -594,7 +606,7 @@ header .btn.btn-uar-lang-sel>span {
 
 :not(.courseware)>#content.content-wrapper {
   margin: 0 auto !important;
-  padding: 12px 16px 32px !important;
+  padding: 12px 12px 32px !important;
   max-width: 1600px !important;
 }
 
@@ -604,9 +616,7 @@ header .btn.btn-uar-lang-sel>span {
 
 header.global-header {
   border: none !important;
-  height: 140px !important;
-  max-height: 140px !important;
-  min-height: 140px !important;
+  z-index: 99999;
 }
 .main-header {
   max-width: 1600px;
@@ -684,14 +694,22 @@ header .btn.btn-uar-lang-sel>span {
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .learning-header .logo img {
     height: 40px !important;
     max-height: 40px;
   }
   header.global-header {
     position: sticky !important;
+    height: 140px !important;
+    max-height: 140px !important;
+    min-height: 140px !important;
+    top: 0 !important;
   }
+  .uar-footer{
+    padding-bottom: .5rem;
+  }
+  
 }
 
 header.global-header .nav-links .secondary .dropdown-user-menu {
@@ -826,13 +844,6 @@ body.view-in-course .wrapper-course-material .course-material .course-tabs {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
 }
 
-@media (max-width:767px) {
-  .uar-bottom-header .btn:not(.dropdown-toggle) {
-    padding: 4px 8px !important;
-    font-size: 11px !important;
-  }
-}
-
 .uar-bottom-header .course-header .course-name {
   max-height: 74px !important;
   overflow: hidden !important;
@@ -858,4 +869,54 @@ header.global-header .course-header {
   background-color: #7e0043 !important;
   border-color: #7e0043 !important;
   color: #fff !important;
+}
+@media (min-width: 768px){
+  .uar-top-menu.active {
+    border-bottom: 2px solid #5708ab !important;
+  }
+  .uar-top-menu:hover{
+    background-color: #e9e6e4 !important;
+    color: #454545 !important;
+  }
+}
+@media (max-width:767.9px){
+  .uar-top-menu-container{
+    border-top: 1px solid #5708ab;
+    bottom: 0;
+    height: 50px!important;
+    position: fixed;
+    z-index: 99999;
+    max-width: 100vw !important;
+    max-height: 50px !important;
+  }
+  .uar-top-menu-container .uar-top-menu{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 8px!important;
+    justify-content: space-between;
+    width: calc(25% - 0.5rem) !important;
+    overflow: hidden;
+    max-width: calc(25% - 0.5rem) !important;
+  }
+  .uar-top-menu-container .uar-top-menu .uar-top-menu-text{
+    line-height: 1.2 !important;
+  }
+  .uar-top-menu-container .uar-top-menu.active{
+      border-top: 2px solid #5708ab !important;
+  }
+  .uar-top-menu-container .uar-top-menu i.fas, .uar-top-menu-container .uar-top-menu div{
+    color: #5708ab !important;
+  }
+  .uar-footer{
+    padding-bottom: 50px;
+  }
+}
+.wrap-instructor-info .instructor-info-action:hover{
+  background-color: #e9e6e4!important;
+  text-decoration: none !important;
+}
+.instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link:hover, .instructor-dashboard-content-2 .data-download-nav .nav-item .btn-link:hover, .instructor-dashboard-content-2 .instructor-nav .nav-item .btn-link:focus, .instructor-dashboard-content-2 .data-download-nav .nav-item .btn-link:focus{
+  text-decoration: none !important;
+  background-color: #e9e6e4!important;
 }

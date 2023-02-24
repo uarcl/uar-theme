@@ -51,29 +51,42 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
         )}
     % endif
 <div class="main-header">
-<div class="d-flex uar-top-header" >
-    <div class="d-flex container-xl px-1 align-items-center justify-content-md-between justify-content-end uar-top-header-container">
-      <div class="d-flex align-items-center justify-content-start justify-content-md-center w-100">
-        <a href="https://www.uar.cl/docencia/cursos-y-talleres/" class="btn btn-uar-header" target="_blank">
-          <span><i class="fas fa-people-arrows btn-uar-header-icon"></i>ESTUDIA EN LA UAR</span>
-        </a>
-        <a href="https://www.uar.cl/ensenaconlauar/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
-          <span><i class="fas fa-chalkboard-teacher btn-uar-header-icon"></i>ENSEÑA EN LA UAR</span>
-        </a>
-        <a href="https://www.uar.cl/investigaconlauar/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
-          <span><i class="fas fa-search btn-uar-header-icon"></i>INVESTIGA CON LA UAR</span>
-        </a>
-        <a href="https://www.uar.cl/vinculaconlauar/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
-          <span><i class="fas fa-external-link-alt btn-uar-header-icon"></i>VINCULA CON LA UAR</span>
-        </a>
+% if not disable_login_register_buttons:
+  <div class="d-flex uar-top-header" >
+      <div class="d-flex container-xl px-1 align-items-center justify-content-md-between justify-content-end uar-top-header-container">
+        % if course and user.is_authenticated and not is_about_page:
+          <%
+            display_name = course.display_name_with_default
+            if settings.FEATURES.get('CUSTOM_COURSES_EDX', False):
+              ccx = get_current_ccx(course.id)
+              if ccx:
+                display_name = ccx.display_name
+          %>
+          <div class="mx-1 mx-md-3 font-weight-bold course-title text-white text-truncate w-100">${display_name}</div>
+        % else:
+          <div class="d-flex align-items-center justify-content-start justify-content-md-center w-100">
+            <a href="https://www.uar.cl/docencia/cursos-y-talleres/" class="btn btn-uar-header" target="_blank">
+              <span><i class="fas fa-people-arrows btn-uar-header-icon"></i>ESTUDIA EN LA UAR</span>
+            </a>
+            <a href="https://www.uar.cl/ensenaconlauar/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
+              <span><i class="fas fa-chalkboard-teacher btn-uar-header-icon"></i>ENSEÑA EN LA UAR</span>
+            </a>
+            <a href="https://www.uar.cl/investigaconlauar/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
+              <span><i class="fas fa-search btn-uar-header-icon"></i>INVESTIGA CON LA UAR</span>
+            </a>
+            <a href="https://www.uar.cl/vinculaconlauar/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
+              <span><i class="fas fa-external-link-alt btn-uar-header-icon"></i>VINCULA CON LA UAR</span>
+            </a>
+          </div>
+        % endif
+        <div>
+            <button class="btn btn-uar-lang-sel" id="change_user_lang_button">
+              <span><i class="fas fa-globe btn-uar-header-icon"></i><span id="current_user_lang" class="d-none d-md-inline-block"></span><span id="current_user_lang_mobile" class="d-inline-block d-md-none"></span></span>
+            </button>
+          </div>
       </div>
-      <div>
-        <button class="btn btn-uar-lang-sel" id="change_user_lang_button">
-          <span><i class="fas fa-globe btn-uar-header-icon"></i><span id="current_user_lang"></span></span>
-        </button>
-      </div>
-    </div>
-</div>
+  </div>
+% endif
 <div class="uar-bottom-header container-xl py-2 d-flex align-items-center justify-content-between">
         <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
         % if user.is_authenticated:
@@ -86,10 +99,12 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 </div>
 <script>
   document.getElementById("current_user_lang").textContent =  (Cookies.get("openedx-language-preference") === "en")?"ENGLISH":"ESPAÑOL";
+  document.getElementById("current_user_lang_mobile").textContent =  (Cookies.get("openedx-language-preference") === "en")?"EN":"ES";
   document.getElementById("change_user_lang_button").addEventListener("click",function(){
     var new_user_lang = (Cookies.get("openedx-language-preference") === "en")?"es-419":"en";
     Cookies.set("openedx-language-preference",new_user_lang,{domain:'.uardigital.cl',expires: 365,path:'/',secure: true,sameSite:'None'});
     document.getElementById("current_user_lang").textContent = (new_user_lang === "en")?"ENGLISH":"ESPAÑOL";
+    document.getElementById("current_user_lang_mobile").textContent = (new_user_lang === "en")?"EN":"ES";
     window.location.reload();
   });
 </script>
