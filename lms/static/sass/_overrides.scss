@@ -881,35 +881,42 @@ header.global-header .course-header {
 }
 @media (max-width:767.9px){
   .uar-top-menu-container{
-    border-top: 1px solid #5708ab;
-    bottom: 0;
-    height: 50px!important;
     position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 55px!important;
+    max-height: 55px !important;
+    min-height: 55px !important;
     z-index: 99999;
+    width: 100vw !important;
     max-width: 100vw !important;
-    max-height: 50px !important;
+    min-width: 100vw !important;
+    box-shadow: 0 6px 6px -3px rgba(0,0,0,0.2), 0 10px 14px 1px rgba(0,0,0,0.14), 0 4px 18px 3px rgba(0,0,0,0.12);
+    border-radius: 12px 12px 0 0 !important;
   }
   .uar-top-menu-container .uar-top-menu{
     align-items: center;
     display: flex;
     flex-direction: column;
-    font-size: 8px!important;
+    font-size: 8px !important;
     justify-content: space-between;
-    width: calc(25% - 0.5rem) !important;
     overflow: hidden;
-    max-width: calc(25% - 0.5rem) !important;
+    width: calc(25% - 1rem) !important;
+    max-width: calc(25% - 1rem) !important;
+    min-width: calc(25% - 1rem) !important;
+    border-top: 2px solid transparent;
   }
   .uar-top-menu-container .uar-top-menu .uar-top-menu-text{
     line-height: 1.2 !important;
   }
   .uar-top-menu-container .uar-top-menu.active{
-      border-top: 2px solid #5708ab !important;
+    border-top-color: #5708ab!important;
   }
-  .uar-top-menu-container .uar-top-menu i.fas, .uar-top-menu-container .uar-top-menu div{
+  .uar-top-menu-container .uar-top-menu .uar-top-menu-icon, .uar-top-menu-container .uar-top-menu .uar-top-menu-text{
     color: #5708ab !important;
   }
   .uar-footer{
-    padding-bottom: 50px;
+    padding-bottom: 55px;
   }
 }
 .wrap-instructor-info .instructor-info-action:hover{

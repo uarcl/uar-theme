@@ -42,9 +42,9 @@ enterprise_customer_link = get_enterprise_learner_portal(request)
           dashboard_link_class = 'active' if is_dashboard_page else ''
         %>
         <div class="d-flex flex-row m-0 ml-md-3 w-100 bg-white uar-top-menu-container">
-          <a class="text-gray-700 uar-mfe-font uar-font-12p text-decoration-none text-uppercase font-weight-bold pt-1.5 pb-2 px-3 mx-1 text-center uar-top-menu ${dashboard_link_class}" href="${reverse('dashboard')}">
-            <i class="fas fa-chalkboard d-md-none uar-font-18p"></i>
-            <div class="text-uppercase mt-1 uar-top-menu-text">${_("Courses")}</div>
+          <a class="text-gray-700 uar-mfe-font uar-font-12p text-decoration-none text-uppercase font-weight-bold py-2 px-3 mx-2 text-center uar-top-menu ${dashboard_link_class}" href="${reverse('dashboard')}">
+            <i class="fas fa-chalkboard d-md-none uar-font-18p uar-top-menu-icon"></i>
+            <div class="text-uppercase mt-2 uar-top-menu-text">${_("Courses")}</div>
           </a>
         </div>
   % endif
