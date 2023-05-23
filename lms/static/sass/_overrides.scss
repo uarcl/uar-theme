@@ -930,3 +930,116 @@ header.global-header .course-header {
 .course-target-link.enter-course{
   border-radius: 12px !important;
 }
+body.view-in-course .wrapper-preview-menu{
+  display: none !important;
+}
+.uar-programa h1{
+  color: #3a2562!important;
+font-weight: 700 !important;
+font-size: 1.2rem !important;
+border-top: 1px dotted #3a2562!important;
+border-bottom: 1px dotted #3a2562!important;
+padding: 16px !important;
+}
+.uar-programa .accordion .card-header{
+  background-color: #3a2562!important;
+}
+.uar-programa .accordion .card-header .btn{
+  color: #fff !important;
+  border: none !important;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  border-radius: 0;
+  border-color: transparent;
+  padding: 1px;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  white-space: nowrap;
+  text-align: left;
+  width: 100%;
+  min-width: 100%;
+}
+.uar-programa .accordion .card-header .btn div{
+  width: calc(100% - 36px);
+  display: inline-block;
+}
+.uar-programa .accordion .card-header .btn::before{
+  content: "\f04b";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 6px;
+  font-style: normal;
+  font-weight: 900;
+}
+.uar-programa .accordion .card-header .btn:not(.collapsed):after{
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 6px;
+  font-style: normal;
+  font-weight: 900;
+}
+.uar-programa .accordion .card-header .btn:hover,.uar-programa .accordion .card-header .btn:focus{
+  text-decoration: none !important;
+}
+.uar-programa p.uar-titulo{
+  color: #3a2562!important;
+font-weight: 700 !important;
+margin-bottom: -4px !important;
+}
+
+.uar-programa h1.uar-titulo-ruta, .uar-programa h1.uar-titulo-programa{
+  display: flex;
+  align-items: center;
+  margin: 16px 0 !important;
+}
+.uar-programa h1.uar-titulo-programa::before{
+  content: url('https://uardigital.cl/static/uar-theme/images/programa.png');
+  margin-right: 12px;
+}
+.uar-programa h1.uar-titulo-ruta::before{
+  content: url('https://uardigital.cl/static/uar-theme/images/ruta.png');
+  margin-right: 12px;
+}
+.uar-programa .uar-semanas-header{
+  background-color: #3a2562!important;
+  color: #fff;
+  margin: 8px;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  font-weight: 700;
+}
+.uar-programa .uar-semanas-content{
+  text-align: center;
+  margin-bottom: 8px;
+}
+.uar-programa .uar-tabla{
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-top: 1rem !important;
+}
+.uar-programa .uar-tabla .uar-tabla-columna{
+  -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+@media (min-width: 768px){
+  .uar-programa .uar-tabla .uar-tabla-columna{
+    -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  }
+}
+.uar-programa .uar-separador{
+  border-top: 1px dotted #3a2562!important;
+  padding: 16px 0;
+  margin-top: 16px;
+}
