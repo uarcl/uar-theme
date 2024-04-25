@@ -65,7 +65,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
           <div class="mx-1 mx-md-3 font-weight-bold course-title text-white text-truncate w-100">${display_name}</div>
         % else:
           <div class="d-flex align-items-center justify-content-start justify-content-md-center w-100">
-            <a href="https://www.uar.cl/docencia/cursos-y-talleres/" class="btn btn-uar-header" target="_blank">
+            <a href="https://www.uar.cl/docencia/cursos-y-talleres/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
               <span><i class="fas fa-people-arrows btn-uar-header-icon"></i>ESTUDIA EN LA UAR</span>
             </a>
             <a href="https://www.uar.cl/ensenaconlauar/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
@@ -73,9 +73,6 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
             </a>
             <a href="https://www.uar.cl/investigaconlauar/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
               <span><i class="fas fa-search btn-uar-header-icon"></i>INVESTIGA CON LA UAR</span>
-            </a>
-            <a href="https://www.uar.cl/vinculaconlauar/" class="d-none d-md-flex btn btn-uar-header" target="_blank">
-              <span><i class="fas fa-external-link-alt btn-uar-header-icon"></i>VINCULA CON LA UAR</span>
             </a>
           </div>
         % endif
